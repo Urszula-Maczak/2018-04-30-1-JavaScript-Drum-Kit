@@ -1,0 +1,50 @@
+html {
+	font-size: 10px; /*kiedy stosuję jednostkę rem muszę w html określić nadrzędną wartość, 
+	do której będę się odnosić definiując wielkość poszczególnych elementów na stronie.
+	To nowa jednostka CSS, która warto stosować dla uzytecznych stron internetowych*/
+	background: url(https://cdn.pixabay.com/photo/2017/10/01/13/28/music-2805506_960_720.jpg);
+	background-size: cover; /*aby zdjęcie pokryło cały dokument HTML*/
+	background-repeat: no-repeat; /*nie powtarza się ujęcie zdjęciowe jako kilka okienek*/
+}
+body {
+	margin: 0;
+	font-family: sans-serif;
+}
+.keys {
+	display: flex; /*wyświetla divy o klasie key w liniowym rzędzie*/
+	align-items: center;
+	justify-content: center; 
+	/*zastosowaanie justify-content i align-items przy display - flex 
+	daje element flex idealnie wyśrodkowany */
+  	min-height: 100vh; 
+}
+.key {
+	border: .3rem solid black; /*stosuję jednostkę rem, która odwołuje się do 
+	nadrzędnej wartości elementu HTML, czyli tutaj do font-size: 20px*/
+	border-radius: .5rem; /*zaokrągliły się boardery*/
+	border-color: #ffc600;
+	margin: 1rem; /*tworzy się space między divami keys*/
+	font-size: 1.5rem;
+	padding: 1rem .5rem;
+	width: 10rem;
+	text-align: center;
+	color: white;
+	background: rgba(0,0,0,0.4); /*tworzy się przezroczyste tło prostokątów*/
+	text-shadow: 0 0 .5rem black;
+	transition: all 1.07s ease; /*zwiększając sekundy spowalnia powiększanie, robiąc wrażenie zwolnionego filmu*/
+}
+.playing {
+	transform: scale(1.3); /*powiększa element klawisza,im większa liczba np. to b.duże powiększenie*/
+	border-color: blue; /*zmienia kolor ramki elementu keyboard*/
+	box-shadow: 0 0 20px white; /*tworzy biały cień wokół ramki*/ 
+}
+kbd {
+	display: block; /*wyswietla element kbd pionow w elemencie div o klasie keys;*/
+	font-size: 4rem;
+}
+.sound {
+	font-size: 1.2rem; /*zmniejsza wielkość elemntu span o klasie sound w porównaniu do elementu kbd*/
+	text-transform: uppercase;
+	letter-spacing: .1rem; /*tworzy się przestrzeń między literkami w elemencie span*/
+	color: #ffc600;
+}
